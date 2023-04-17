@@ -1,9 +1,7 @@
 {
   "name": "clear_my_list_data_types",
   "version": "0.8.0",
-  "description": "All data type definitions that ClearMyList.io needs.",
-  "outDir": "dist",
-  "strict": true,
+  "description": "All data type definitions that https://ClearMyList.io needs.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "private": false,
@@ -23,6 +21,11 @@
   ],
   "author": "Clear My List (https://clearmylist.io)",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
   "dependencies": {
     "eslint": "8.38.0",
     "eslint-config-airbnb-typescript": "17.0.0",
