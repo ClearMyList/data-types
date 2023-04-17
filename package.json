@@ -6,6 +6,7 @@
   "strict": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "private": false,
   "scripts": {
     "lint": "eslint . --fix --max-warnings=0",
     "format": "prettier -w .",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@types/node": "18.15.11",
     "husky": "8.0.3",
+    "pinst": "3.0.0",
     "tslint": "6.1.3",
     "typescript": "5.0.4"
   }
