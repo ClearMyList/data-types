@@ -1,5 +1,5 @@
 {
-  "name": "clear_my_list_data_types",
+  "name": "@clearmylist/data_types",
   "version": "0.8.0",
   "description": "All data type definitions that https://ClearMyList.io needs.",
   "main": "dist/index.js",
