@@ -1,6 +1,6 @@
 {
   "name": "@clearmylist/data-types",
-  "version": "0.8.5",
+  "version": "0.8.9",
   "description": "All data type definitions that https://ClearMyList.io needs.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,7 @@
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
     "tsc": "tsc --build --force",
-    "pub": "rm -rf dist; npm run tsc && npm publish --access public"
+    "pub": "rm -rf dist && npm run tsc && npm publish --access public"
   },
   "keywords": [
     "ClearMyList",

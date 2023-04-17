@@ -12,8 +12,9 @@ export type UserProfileDataType = {
   dislikedCount?: number;
   createdAt?: Date;
   updatedAt?: Date;
-  twitterUsername;
-  facebookUsername;
-  linkedInUsername;
-  instagramUsername;
+  twitterUsername?: string;
+  facebookUsername?: string;
+  linkedInUsername?: string;
+  instagramUsername?: string;
+  website?: string;
 };
