@@ -1,10 +1,9 @@
 {
   "name": "@clearmylist/data-types",
-  "version": "0.8.3",
+  "version": "0.8.5",
   "description": "All data type definitions that https://ClearMyList.io needs.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "private": false,
   "scripts": {
     "lint": "eslint . --fix --max-warnings=0",
     "format": "prettier -w .",
