@@ -1,7 +1,7 @@
 /**
  * Data type of template for front-end usage.
  */
-export type TemplateDateType = {
+export type TemplateDataType = {
   id: string;
   subject: string;
   content?: string;
@@ -15,4 +15,4 @@ export type TemplateDateType = {
   publishedAt?: Date;
 };
 
-export type TemplateListDataType = TemplateDateType[];
+export type TemplateListDataType = TemplateDataType[];
