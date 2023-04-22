@@ -28,15 +28,15 @@ export type TaskSubitemDataType = {
 };
 
 export type TaskAttachmentDataType = {
-  id: string,
-  ownerId: string,
-  taskId: string,
-  originalFilename: string,
-  fileSize: number,
-  storageFilename: string,
-  isDeleted?: boolean,
-  createdAt: Date,
-  updatedAt?: Date
+  id: string;
+  ownerId: string;
+  taskId: string;
+  originalFilename: string;
+  fileSize: number;
+  storageFilename: string;
+  isDeleted?: boolean;
+  createdAt: Date;
+  updatedAt?: Date;
 };
 
 export type TaskProgressDataType = {
