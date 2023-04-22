@@ -5,11 +5,11 @@
 export type QuotaDataType = {
   id?: string;
   userId: string;
-  subject: string;
-  task: {
+  subject?: string;
+  task?: {
     maxNewAmountMonthly: number;
   };
-  storage: {
+  storage?: {
     maxSizeInBytes: number;
     usedSizeInBytes?: number;
   };
