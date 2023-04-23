@@ -8,6 +8,7 @@ export type QuotaDataType = {
   subject?: string;
   task?: {
     maxNewAmountMonthly: number;
+    newTaskCountInCurrentMonth?: number;
   };
   storage?: {
     maxSizeInBytes: number;
