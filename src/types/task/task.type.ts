@@ -50,3 +50,12 @@ export type TaskVersionDataType = {
   createdAt: number;
   updatedAt: number;
 };
+
+export type TaskTagDataType = {
+  id?: string;
+  taskId: string;
+  taskAssigneeId: string;
+  tags?: string[];
+  createdAt?: Date;
+  updatedAt?: Date;
+};
