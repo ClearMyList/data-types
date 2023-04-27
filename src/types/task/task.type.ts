@@ -1,5 +1,5 @@
 export type TaskDataType = {
-  id: string;
+  id?: string;
   subject: string;
   content?: string;
   creatorId: string;
