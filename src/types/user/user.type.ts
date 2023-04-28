@@ -12,3 +12,5 @@ export type UserDataType = {
 };
 
 export type UserRoleType = 'admin' | 'client';
+
+export type LikedUserDataType = { userId: string; createdAt: Date };

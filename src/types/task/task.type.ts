@@ -1,3 +1,5 @@
+import { LikedUserDataType } from '../user/user.type';
+
 export type TaskDataType = {
   id?: string;
   subject: string;
@@ -64,7 +66,7 @@ export type TaskLikeDataType = {
   id?: string;
   taskId: string;
   taskAssigneeId: string;
-  likedUsers?: { userId: string; createdAt: Date }[];
+  likedUsers?: LikedUserDataType[];
   createdAt?: Date;
   updatedAt?: Date;
 };
