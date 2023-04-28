@@ -59,3 +59,12 @@ export type TaskTagDataType = {
   createdAt?: Date;
   updatedAt?: Date;
 };
+
+export type TaskLikeDataType = {
+  id?: string;
+  taskId: string;
+  taskAssigneeId: string;
+  likedUsers?: { userId: string; createdAt: Date }[];
+  createdAt?: Date;
+  updatedAt?: Date;
+};
