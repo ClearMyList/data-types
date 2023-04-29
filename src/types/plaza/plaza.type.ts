@@ -9,5 +9,6 @@ export type PlazaActivityAssigneeDataType = {
   headerBackgroundImageUrl?: string;
   location?: string;
   occupation?: string;
+  about?: string;
   createdAt?: Date;
 };
