@@ -16,6 +16,7 @@ export type TaskDataType = {
   createdAt?: Date;
   updatedAt?: Date;
   completedAt?: Date;
+  forkFromId?: string;
 };
 
 export type TaskVisibilityType = 'public' | 'friend' | 'private';
