@@ -1,4 +1,4 @@
-import { LikedUserDataType } from '../user/user.type';
+import { ForkedUserDataType, LikedUserDataType } from '../user/user.type';
 
 export type TaskDataType = {
   id?: string;
@@ -68,6 +68,15 @@ export type TaskLikeDataType = {
   taskId: string;
   taskAssigneeId: string;
   likedUsers?: LikedUserDataType[];
+  createdAt?: Date;
+  updatedAt?: Date;
+};
+
+export type TaskForkDataType = {
+  id?: string;
+  taskId: string;
+  taskCreatorId: string;
+  forkedUsers?: ForkedUserDataType[];
   createdAt?: Date;
   updatedAt?: Date;
 };
