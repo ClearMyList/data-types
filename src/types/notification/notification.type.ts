@@ -1,4 +1,3 @@
-import { PlazaActivityDataType } from '../plaza/plaza.type';
 import { TaskDataType } from '../task/task.type';
 import { TemplateDataType } from '../template/template.type';
 
@@ -16,7 +15,7 @@ export type NotificationCategoryType =
   | 'comment'
   | 'comment-reply';
 
-export type NotificationPayloadType = PlazaActivityDataType | TaskDataType | TemplateDataType;
+export type NotificationPayloadType = TaskDataType | TemplateDataType;
 
 export type NotificationDataType = {
   id?: string;
