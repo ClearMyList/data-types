@@ -11,7 +11,7 @@ export type NotificationCategoryType =
   | 'template-apply'
   | 'message'
   | 'follow'
-  | 'announcement'
+  | 'system-announcement'
   | 'mention'
   | 'comment'
   | 'comment-reply';
@@ -23,8 +23,10 @@ export type NotificationDataType = {
   category: NotificationCategoryType;
   message: string;
   payload?: NotificationPayloadType;
-  receivers: string[];
+  publisherId: string;
+  receiverIds: string[];
   readers?: { userId: string; createdAt: Date }[];
+  isDeleted?: boolean;
   createdAt?: Date;
   updatedAt?: Date;
 };
