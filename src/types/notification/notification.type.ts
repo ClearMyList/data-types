@@ -12,9 +12,9 @@ export type NotificationCategoryType =
   | 'message'
   | 'follow'
   | 'announcement'
-  | 'comment'
   | 'mention'
-  | 'reply';
+  | 'comment'
+  | 'comment-reply';
 
 export type NotificationPayloadType = PlazaActivityDataType | TaskDataType | TemplateDataType;
 
