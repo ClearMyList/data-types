@@ -23,7 +23,7 @@ export type NotificationDataType = {
   message: string;
   payload?: NotificationPayloadType;
   publisherId: string;
-  receiverIds: string[];
+  subscriberIds: string[];
   readers?: { userId: string; createdAt: Date }[];
   isDeleted?: boolean;
   createdAt?: Date;
