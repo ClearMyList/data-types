@@ -5,7 +5,7 @@ import { TemplateDataType } from '../template/template.type';
 export type NotificationCategoryType =
   | 'task-like'
   | 'task-dislike'
-  | 'taks-fork'
+  | 'task-fork'
   | 'template-like'
   | 'template-dislike'
   | 'template-apply'
@@ -16,11 +16,13 @@ export type NotificationCategoryType =
   | 'mention'
   | 'reply';
 
+export type NotificationPayloadType = PlazaActivityDataType | TaskDataType | TemplateDataType;
+
 export type NotificationDataType = {
   id?: string;
   category: NotificationCategoryType;
   message: string;
-  payload?: PlazaActivityDataType | TaskDataType | TemplateDataType;
+  payload?: NotificationPayloadType;
   receivers: string[];
   readers?: { userId: string; createdAt: Date }[];
   createdAt?: Date;
