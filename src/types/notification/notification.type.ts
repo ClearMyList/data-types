@@ -1,6 +1,5 @@
 import { TaskDataType } from '../task/task.type';
 import { TemplateDataType } from '../template/template.type';
-import { UserProfileDataType } from '../user/profile/user_profile.type';
 
 export type NotificationCategoryType =
   | 'task-like'
