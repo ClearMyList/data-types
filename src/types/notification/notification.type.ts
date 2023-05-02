@@ -1,5 +1,6 @@
 import { TaskDataType } from '../task/task.type';
 import { TemplateDataType } from '../template/template.type';
+import { UserProfileDataType } from '../user/profile/user_profile.type';
 
 export type NotificationCategoryType =
   | 'task-like'
@@ -23,6 +24,7 @@ export type NotificationDataType = {
   message: string;
   payload?: NotificationPayloadType;
   publisherId: string;
+  publisher?: { [key in 'username' | 'nickname' | 'avatarUrl']: string };
   subscriberIds: string[];
   readers?: { userId: string; createdAt: Date }[];
   isDeleted?: boolean;
