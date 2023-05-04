@@ -7,12 +7,10 @@ export type QuotaDataType = {
   userId: string;
   subject?: string;
   task?: {
-    maxNewAmountMonthly: number;
-    newTaskCountInCurrentMonth?: number;
+    [key in 'maxNewAmountMonthly' | 'newTaskCountInCurrentMonth']: number;
   };
   storage?: {
-    maxSizeInBytes: number;
-    usedSizeInBytes?: number;
+    [key in 'maxSizeInBytes' | 'usedSizeInBytes']: number;
   };
   isDeleted?: boolean;
   createdAt?: Date;

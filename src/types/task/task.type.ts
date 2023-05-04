@@ -17,6 +17,7 @@ export type TaskDataType = {
   updatedAt?: Date;
   completedAt?: Date;
   forkFromId?: string;
+  appliedTemplateId?: string;
 };
 
 export type TaskVisibilityType = 'public' | 'friend' | 'private';
@@ -43,9 +44,7 @@ export type TaskAttachmentDataType = {
 };
 
 export type TaskProgressDataType = {
-  total: number;
-  completed: number;
-  progress: number;
+  [key in 'total' | 'completed' | 'progress']: number;
 };
 
 export type TaskVersionDataType = {

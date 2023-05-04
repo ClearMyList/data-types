@@ -1,13 +1,15 @@
+import { TaskDataType } from '../task/task.type';
+
 /**
  * Data type of template for front-end usage.
  */
 export type TemplateDataType = {
-  id: string;
+  id?: string;
   subject: string;
   content?: string;
   authorId: string;
-  userCount?: number;
-  applied?: boolean;
+  author?: { username: string; nickname: string; avatarUrl: string };
+  subtasks?: SubtaskDataType[];
   isPublished?: boolean;
   isDeleted?: boolean;
   createdAt?: Date;
@@ -15,4 +17,12 @@ export type TemplateDataType = {
   publishedAt?: Date;
 };
 
-export type TemplateListDataType = TemplateDataType[];
+export type SubtaskDataType = {
+  timeSpanFromPreviousTaskInMillisecond?: number;
+  task: TaskDataType;
+};
+
+export type TemplateTagDataType = {
+  name: string;
+  templateIds: string[];
+};
