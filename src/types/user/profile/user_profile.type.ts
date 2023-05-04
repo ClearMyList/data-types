@@ -8,6 +8,7 @@ export type UserProfileDataType = {
   followerCount?: number;
   followingCount?: number;
   forkedCount?: number;
+  appliedCount?: number;
   likedCount?: number;
   dislikedCount?: number;
   createdAt?: Date;
