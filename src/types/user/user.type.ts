@@ -16,3 +16,8 @@ export type UserRoleType = 'admin' | 'client';
 export type LikedUserDataType = { userId: string; createdAt: Date };
 
 export type ForkedUserDataType = { userId: string; createdAt: Date };
+
+export type AccompublishmentDataType = {
+  username: string;
+  task?: { completedCount?: number };
+};
