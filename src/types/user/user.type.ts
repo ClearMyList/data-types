@@ -17,7 +17,7 @@ export type LikedUserDataType = { userId: string; createdAt: Date };
 
 export type ForkedUserDataType = { userId: string; createdAt: Date };
 
-export type AccompublishmentDataType = {
+export type AccomplishmentDataType = {
   username: string;
   task?: { completedCount?: number };
 };
