@@ -9,7 +9,7 @@ export type TemplateDataType = {
   content?: string;
   authorId: string;
   author?: { username: string; nickname: string; avatarUrl: string };
-  subtasks?: SubtaskDataType[];
+  subtasks?: TemplateSubtaskDataType[];
   isPublished?: boolean;
   isDeleted?: boolean;
   createdAt?: Date;
@@ -17,7 +17,7 @@ export type TemplateDataType = {
   publishedAt?: Date;
 };
 
-export type SubtaskDataType = {
+export type TemplateSubtaskDataType = {
   timeSpanFromPreviousTaskInMillisecond?: number;
   task: TaskDataType;
 };

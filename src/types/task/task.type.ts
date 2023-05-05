@@ -4,10 +4,10 @@ export type TaskDataType = {
   id?: string;
   subject: string;
   content?: string;
-  creatorId: string;
-  assigneeId: string;
+  creatorId?: string;
+  assigneeId?: string;
   repeatRule?: TaskRepeatRuleType;
-  visibility: TaskVisibilityType;
+  visibility?: TaskVisibilityType;
   isCompleted?: boolean;
   isDeleted?: boolean;
   attachments?: TaskAttachmentDataType[];
