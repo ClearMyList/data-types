@@ -26,3 +26,5 @@ export type TemplateTagDataType = {
   name: string;
   templateIds: string[];
 };
+
+export type TemplateFolderDataType = 'all-published' | 'my-published' | 'my-draft' | 'my-deleted';
