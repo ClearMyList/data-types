@@ -24,7 +24,7 @@ export type TaskVisibilityType = 'public' | 'friend' | 'private';
 
 export type TaskRepeatRuleType = 'none' | 'daily' | 'weekly' | 'monthly' | 'yearly';
 
-export type TaskFolderType = 'plan' | 'completed' | 'received' | 'trash';
+export type TaskCategoryDataType = 'plan' | 'completed' | 'received' | 'trash';
 
 export type TaskSubitemDataType = {
   subject: string;
