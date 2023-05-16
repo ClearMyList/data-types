@@ -8,13 +8,24 @@ export type TemplateDataType = {
   subject: string;
   content?: string;
   authorId: string;
-  author?: { username: string; nickname: string; avatarUrl: string };
+  author?: TemplateAuthorDataType;
   subtasks?: TemplateSubtaskDataType[];
   isPublished?: boolean;
   isDeleted?: boolean;
   createdAt?: Date;
   updatedAt?: Date;
   publishedAt?: Date;
+};
+
+export type TemplateAuthorDataType = {
+  username: string;
+  nickname?: string;
+  avatarUrl?: string;
+  headerBackgroundImageUrl?: string;
+  location?: string;
+  occupation?: string;
+  about?: string;
+  createdAt?: Date;
 };
 
 export type TemplateSubtaskDataType = {
