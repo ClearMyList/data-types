@@ -42,3 +42,8 @@ export type AuthUserDataType = {
   createdAt?: Date;
   updatedAt?: Date;
 };
+
+export type UserPreferenceDataType = {
+  id: string;
+  theme: ThemeDataType;
+};
