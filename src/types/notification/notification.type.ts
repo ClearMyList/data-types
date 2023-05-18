@@ -30,3 +30,5 @@ export type NotificationDataType = {
   createdAt?: Date;
   updatedAt?: Date;
 };
+
+export const NotificationWildcard = '*';
