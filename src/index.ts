@@ -7,3 +7,4 @@ export * from './types/plaza/plaza.type';
 export * from './types/notification/notification.type';
 export * from './types/reminder/reminder.type';
 export * from './types/system/system.type';
+export * from './constants/code';
