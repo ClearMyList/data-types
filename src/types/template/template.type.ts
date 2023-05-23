@@ -31,7 +31,7 @@ export type TemplateAuthorDataType = {
 };
 
 export type TemplateSubtaskDataType = {
-  timeSpanFromPreviousTaskInMillisecond?: number;
+  daysAfterPreviousTask?: number;
   task: TaskDataType;
 };
 
