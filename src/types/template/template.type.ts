@@ -10,8 +10,6 @@ export type TemplateDataType = {
   authorId: string;
   author?: TemplateAuthorDataType;
   subtasks?: TemplateSubtaskDataType[];
-  firstRemindAtHour?: number;
-  firstRemindAtMinute?: number;
   isPublished?: boolean;
   isDeleted?: boolean;
   createdAt?: Date;
