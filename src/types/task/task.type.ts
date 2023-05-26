@@ -18,6 +18,7 @@ export type TaskDataType = {
   completedAt?: Date;
   forkFromId?: string;
   appliedTemplateId?: string;
+  subtaskIndexOfAppliedTemplate?: number;
 };
 
 export type TaskVisibilityType = 'public' | 'friend' | 'private';
