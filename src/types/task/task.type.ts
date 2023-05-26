@@ -18,8 +18,8 @@ export type TaskDataType = {
   completedAt?: Date;
   forkFromId?: string;
   repeatParentTaskId?: string;
-  appliedTemplateId?: string;
-  subtaskIndexOfAppliedTemplate?: number;
+  templateId?: string;
+  subtaskIndexOfTemplate?: number;
 };
 
 export type TaskVisibilityType = 'public' | 'friend' | 'private';
