@@ -39,3 +39,11 @@ export type TemplateTagDataType = {
 };
 
 export type TemplateFolderDataType = 'all-published' | 'my-published' | 'my-draft' | 'my-deleted';
+
+export type TemplateUserDataType = {
+  id?: string;
+  templateId?: string;
+  users?: { id: string; createdAt: Date }[];
+  createdAt?: Date;
+  updatedAt?: Date;
+};
