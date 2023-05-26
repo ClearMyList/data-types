@@ -17,6 +17,7 @@ export type TaskDataType = {
   updatedAt?: Date;
   completedAt?: Date;
   forkFromId?: string;
+  repeatParentTaskId?: string;
   appliedTemplateId?: string;
   subtaskIndexOfAppliedTemplate?: number;
 };
