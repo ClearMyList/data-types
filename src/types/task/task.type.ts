@@ -2,7 +2,7 @@ import { ForkedUserDataType, LikedUserDataType } from '../user/user.type';
 
 export type TaskDataType = {
   id?: string;
-  subject: string;
+  subject?: string;
   content?: string;
   creatorId?: string;
   assigneeId?: string;
