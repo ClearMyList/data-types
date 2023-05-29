@@ -5,7 +5,7 @@ export type ReminderDataType = {
   content?: string;
 };
 
-export type RemindAtDataType = {
+export type DateDataType = {
   /**
    * Year.
    */
@@ -18,6 +18,9 @@ export type RemindAtDataType = {
    * Day of month, 1-31.
    */
   date: number;
+};
+
+export type DateTimeDataType = DateDataType & {
   /**
    * Hour, 0-23.
    */
