@@ -1,6 +1,6 @@
 export type ReminderDataType = {
   taskId: string;
-  remindAt: Date;
+  remindAt: DateTimeDataType;
   subject: string;
   content?: string;
 };

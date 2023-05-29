@@ -1,3 +1,4 @@
+import { DateTimeDataType } from '../reminder/reminder.type';
 import { ForkedUserDataType, LikedUserDataType } from '../user/user.type';
 
 export type TaskDataType = {
@@ -12,7 +13,7 @@ export type TaskDataType = {
   isDeleted?: boolean;
   attachments?: TaskAttachmentDataType[];
   subitems?: TaskSubitemDataType[];
-  remindAt?: Date;
+  remindAt?: DateTimeDataType;
   createdAt?: Date;
   updatedAt?: Date;
   completedAt?: Date;
