@@ -29,7 +29,9 @@ export type TemplateAuthorDataType = {
 };
 
 export type TemplateSubtaskDataType = {
-  daysAfterPreviousTask?: number;
+  daysAfterPreviousTask: number;
+  preferRemindAtHour: number;
+  preferRemindAtMinute: number;
   task: TaskDataType;
 };
 
