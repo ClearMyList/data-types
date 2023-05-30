@@ -55,14 +55,6 @@ export type TaskVersionDataType = {
   updatedAt: number;
 };
 
-export type TaskTagDataType = BaseDataType & {
-  taskId: string;
-  taskAssigneeId: string;
-  tags?: string[];
-  createdAt?: Date;
-  updatedAt?: Date;
-};
-
 export type TaskLikeDataType = BaseDataType & {
   taskId: string;
   taskAssigneeId: string;

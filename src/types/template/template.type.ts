@@ -35,11 +35,6 @@ export type TemplateSubtaskDataType = {
   task: TaskDataType;
 };
 
-export type TemplateTagDataType = {
-  name: string;
-  templateIds: string[];
-};
-
 export type TemplateFolderDataType = 'all-published' | 'my-published' | 'my-draft' | 'my-deleted';
 
 export type TemplateUserDataType = BaseDataType & {
