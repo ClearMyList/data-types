@@ -1,8 +1,8 @@
+import { BaseDataType } from '../base/base.type';
 import { DateTimeDataType } from '../reminder/reminder.type';
 import { ForkedUserDataType, LikedUserDataType } from '../user/user.type';
 
-export type TaskDataType = {
-  id?: string;
+export type TaskDataType = BaseDataType & {
   subject?: string;
   content?: string;
   creatorId?: string;
@@ -34,8 +34,7 @@ export type TaskSubitemDataType = {
   isCompleted?: boolean;
 };
 
-export type TaskAttachmentDataType = {
-  id: string;
+export type TaskAttachmentDataType = BaseDataType & {
   ownerId: string;
   taskId: string;
   originalFilename: string;
@@ -56,8 +55,7 @@ export type TaskVersionDataType = {
   updatedAt: number;
 };
 
-export type TaskTagDataType = {
-  id?: string;
+export type TaskTagDataType = BaseDataType & {
   taskId: string;
   taskAssigneeId: string;
   tags?: string[];
@@ -65,8 +63,7 @@ export type TaskTagDataType = {
   updatedAt?: Date;
 };
 
-export type TaskLikeDataType = {
-  id?: string;
+export type TaskLikeDataType = BaseDataType & {
   taskId: string;
   taskAssigneeId: string;
   likedUsers?: LikedUserDataType[];
@@ -74,8 +71,7 @@ export type TaskLikeDataType = {
   updatedAt?: Date;
 };
 
-export type TaskForkDataType = {
-  id?: string;
+export type TaskForkDataType = BaseDataType & {
   taskId: string;
   taskCreatorId: string;
   forkedUsers?: ForkedUserDataType[];

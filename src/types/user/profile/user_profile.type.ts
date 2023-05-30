@@ -1,5 +1,6 @@
-export type UserProfileDataType = {
-  id: string;
+import { BaseDataType } from '../../base/base.type';
+
+export type UserProfileDataType = BaseDataType & {
   userId: string;
   avatarUrl?: string;
   location?: string;

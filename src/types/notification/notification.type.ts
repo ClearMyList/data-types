@@ -1,3 +1,4 @@
+import { BaseDataType } from '../base/base.type';
 import { TaskDataType } from '../task/task.type';
 import { TemplateDataType } from '../template/template.type';
 
@@ -17,8 +18,7 @@ export type NotificationCategoryType =
 
 export type NotificationPayloadType = TaskDataType | TemplateDataType;
 
-export type NotificationDataType = {
-  id?: string;
+export type NotificationDataType = BaseDataType & {
   category: NotificationCategoryType;
   message: string;
   payload?: NotificationPayloadType;

@@ -1,7 +1,7 @@
+import { BaseDataType } from '../base/base.type';
 import { ThemeDataType } from '../system/system.type';
 
-export type UserDataType = {
-  id?: string;
+export type UserDataType = BaseDataType & {
   username?: string;
   role?: UserRoleType;
   email?: string;
@@ -27,8 +27,7 @@ export type AccomplishmentDataType = {
 /**
  * AuthUserDataType is simply combain necessary properties of user and user profile.
  */
-export type AuthUserDataType = {
-  id: string;
+export type AuthUserDataType = BaseDataType & {
   username: string;
   token?: string;
   email: string;
@@ -43,7 +42,6 @@ export type AuthUserDataType = {
   updatedAt?: Date;
 };
 
-export type UserPreferenceDataType = {
-  id: string;
+export type UserPreferenceDataType = BaseDataType & {
   theme: ThemeDataType;
 };

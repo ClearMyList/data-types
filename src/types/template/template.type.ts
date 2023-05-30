@@ -1,10 +1,10 @@
+import { BaseDataType } from '../base/base.type';
 import { TaskDataType } from '../task/task.type';
 
 /**
  * Data type of template for front-end usage.
  */
-export type TemplateDataType = {
-  id?: string;
+export type TemplateDataType = BaseDataType & {
   subject: string;
   content?: string;
   authorId: string;
@@ -42,8 +42,7 @@ export type TemplateTagDataType = {
 
 export type TemplateFolderDataType = 'all-published' | 'my-published' | 'my-draft' | 'my-deleted';
 
-export type TemplateUserDataType = {
-  id?: string;
+export type TemplateUserDataType = BaseDataType & {
   templateId?: string;
   users?: { id: string; createdAt: Date }[];
   createdAt?: Date;

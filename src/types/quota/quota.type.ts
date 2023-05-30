@@ -1,9 +1,10 @@
+import { BaseDataType } from '../base/base.type';
+
 /**
  * Quota data type, used to define the quota data structure.
  * 0 or undefined means no quota, -1 means no limit.
  */
-export type QuotaDataType = {
-  id?: string;
+export type QuotaDataType = BaseDataType & {
   userId: string;
   subject?: string;
   task?: {
