@@ -51,8 +51,8 @@ export type TaskProgressDataType = {
 
 export type TaskVersionDataType = {
   taskId: string;
-  createdAt: number;
-  updatedAt: number;
+  createdAt: Date;
+  updatedAt: Date;
 };
 
 export type TaskLikeDataType = BaseDataType & {
