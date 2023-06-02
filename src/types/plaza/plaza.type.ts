@@ -1,8 +1,12 @@
+import { BaseDataType } from '../base/base.type';
 import { TaskDataType } from '../task/task.type';
 
-export type PlazaActivityDataType = { task: TaskDataType; assignee: PlazaActivityAssigneeDataType };
+export interface PlazaActivityDataType extends BaseDataType {
+  task: TaskDataType;
+  assignee: PlazaActivityAssigneeDataType;
+}
 
-export type PlazaActivityAssigneeDataType = {
+export interface PlazaActivityAssigneeDataType {
   username: string;
   nickname?: string;
   avatarUrl?: string;
@@ -11,4 +15,4 @@ export type PlazaActivityAssigneeDataType = {
   occupation?: string;
   about?: string;
   createdAt?: Date;
-};
+}

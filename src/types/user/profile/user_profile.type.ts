@@ -1,6 +1,6 @@
 import { BaseDataType } from '../../base/base.type';
 
-export type UserProfileDataType = BaseDataType & {
+export interface UserProfileDataType extends BaseDataType {
   userId: string;
   avatarUrl?: string;
   location?: string;
@@ -19,4 +19,4 @@ export type UserProfileDataType = BaseDataType & {
   linkedInUsername?: string;
   instagramUsername?: string;
   website?: string;
-};
+}

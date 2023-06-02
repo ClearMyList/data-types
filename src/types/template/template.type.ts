@@ -1,10 +1,12 @@
 import { BaseDataType } from '../base/base.type';
 import { TaskDataType } from '../task/task.type';
 
+export type TemplateFolderType = 'all-published' | 'my-published' | 'my-draft' | 'my-deleted';
+
 /**
- * Data type of template for front-end usage.
+ * Data type of template for front-end usage only.
  */
-export type TemplateDataType = BaseDataType & {
+export interface TemplateDataType extends BaseDataType {
   subject: string;
   content?: string;
   authorId: string;
@@ -15,9 +17,9 @@ export type TemplateDataType = BaseDataType & {
   createdAt?: Date;
   updatedAt?: Date;
   publishedAt?: Date;
-};
+}
 
-export type TemplateAuthorDataType = {
+export interface TemplateAuthorDataType {
   username: string;
   nickname?: string;
   avatarUrl?: string;
@@ -26,20 +28,18 @@ export type TemplateAuthorDataType = {
   occupation?: string;
   about?: string;
   createdAt?: Date;
-};
+}
 
-export type TemplateSubtaskDataType = {
+export interface TemplateSubtaskDataType {
   daysAfterPreviousTask: number;
   preferRemindAtHour: number;
   preferRemindAtMinute: number;
   task: TaskDataType;
-};
+}
 
-export type TemplateFolderDataType = 'all-published' | 'my-published' | 'my-draft' | 'my-deleted';
-
-export type TemplateUserDataType = BaseDataType & {
+export interface TemplateUserDataType extends BaseDataType {
   templateId?: string;
   users?: { id: string; createdAt: Date }[];
   createdAt?: Date;
   updatedAt?: Date;
-};
+}

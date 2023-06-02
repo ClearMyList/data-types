@@ -18,7 +18,7 @@ export type NotificationCategoryType =
 
 export type NotificationPayloadType = TaskDataType | TemplateDataType;
 
-export type NotificationDataType = BaseDataType & {
+export interface NotificationDataType extends BaseDataType {
   category: NotificationCategoryType;
   message: string;
   payload?: NotificationPayloadType;
@@ -29,6 +29,6 @@ export type NotificationDataType = BaseDataType & {
   isDeleted?: boolean;
   createdAt?: Date;
   updatedAt?: Date;
-};
+}
 
 export const NotificationWildcard = '*';

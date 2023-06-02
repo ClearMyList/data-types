@@ -1,6 +1,6 @@
 import { BaseDataType } from '../base/base.type';
 
-export type TextTagDataType = BaseDataType & {
+export interface TextTagDataType extends BaseDataType {
   text: string;
   tags: string[];
-};
+}

@@ -1,7 +1,9 @@
 import { BaseDataType } from '../base/base.type';
 import { ThemeDataType } from '../system/system.type';
 
-export type UserDataType = BaseDataType & {
+export type UserRoleType = 'admin' | 'client';
+
+export interface UserDataType extends BaseDataType {
   username?: string;
   role?: UserRoleType;
   email?: string;
@@ -11,13 +13,17 @@ export type UserDataType = BaseDataType & {
   isDeactivated?: boolean;
   createdAt?: Date;
   updatedAt?: Date;
-};
+}
 
-export type UserRoleType = 'admin' | 'client';
+export interface LikedUserDataType {
+  userId: string;
+  createdAt: Date;
+}
 
-export type LikedUserDataType = { userId: string; createdAt: Date };
-
-export type ForkedUserDataType = { userId: string; createdAt: Date };
+export interface ForkedUserDataType {
+  userId: string;
+  createdAt: Date;
+}
 
 export type AccomplishmentDataType = {
   username: string;
@@ -27,7 +33,7 @@ export type AccomplishmentDataType = {
 /**
  * AuthUserDataType is simply combain necessary properties of user and user profile.
  */
-export type AuthUserDataType = BaseDataType & {
+export interface AuthUserDataType {
   username: string;
   token?: string;
   email: string;
@@ -40,8 +46,8 @@ export type AuthUserDataType = BaseDataType & {
   isDeactivated?: boolean;
   createdAt?: Date;
   updatedAt?: Date;
-};
+}
 
-export type UserPreferenceDataType = BaseDataType & {
+export interface UserPreferenceDataType extends BaseDataType {
   theme: ThemeDataType;
-};
+}

@@ -4,7 +4,7 @@ import { BaseDataType } from '../base/base.type';
  * Quota data type, used to define the quota data structure.
  * 0 or undefined means no quota, -1 means no limit.
  */
-export type QuotaDataType = BaseDataType & {
+export interface QuotaDataType extends BaseDataType {
   userId: string;
   subject?: string;
   task?: {
@@ -18,4 +18,4 @@ export type QuotaDataType = BaseDataType & {
   isDeleted?: boolean;
   createdAt?: Date;
   updatedAt?: Date;
-};
+}

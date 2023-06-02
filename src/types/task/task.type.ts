@@ -2,7 +2,18 @@ import { BaseDataType } from '../base/base.type';
 import { DateTimeDataType } from '../reminder/reminder.type';
 import { ForkedUserDataType, LikedUserDataType } from '../user/user.type';
 
-export type TaskDataType = BaseDataType & {
+export type TaskVisibilityType = 'public' | 'friend' | 'private';
+
+export type TaskRepeatRuleType = 'none' | 'daily' | 'weekly' | 'monthly' | 'yearly';
+
+export type TaskCategoryType = 'plan' | 'completed' | 'received' | 'trash';
+
+export interface TaskSubitemDataType {
+  subject: string;
+  isCompleted?: boolean;
+}
+
+export interface TaskDataType extends BaseDataType {
   subject?: string;
   content?: string;
   creatorId?: string;
@@ -21,20 +32,9 @@ export type TaskDataType = BaseDataType & {
   repeatParentTaskId?: string;
   templateId?: string;
   subtaskIndexOfTemplate?: number;
-};
+}
 
-export type TaskVisibilityType = 'public' | 'friend' | 'private';
-
-export type TaskRepeatRuleType = 'none' | 'daily' | 'weekly' | 'monthly' | 'yearly';
-
-export type TaskCategoryDataType = 'plan' | 'completed' | 'received' | 'trash';
-
-export type TaskSubitemDataType = {
-  subject: string;
-  isCompleted?: boolean;
-};
-
-export type TaskAttachmentDataType = BaseDataType & {
+export interface TaskAttachmentDataType extends BaseDataType {
   ownerId: string;
   taskId: string;
   originalFilename: string;
@@ -43,30 +43,32 @@ export type TaskAttachmentDataType = BaseDataType & {
   isDeleted?: boolean;
   createdAt: Date;
   updatedAt?: Date;
-};
+}
 
-export type TaskProgressDataType = {
-  [key in 'total' | 'completed' | 'progress']: number;
-};
+export interface TaskProgressDataType {
+  total: number;
+  completed: number;
+  progress: number;
+}
 
-export type TaskVersionDataType = {
+export interface TaskVersionDataType {
   taskId: string;
   createdAt: Date;
   updatedAt?: Date;
-};
+}
 
-export type TaskLikeDataType = BaseDataType & {
+export interface TaskLikeDataType extends BaseDataType {
   taskId: string;
   taskAssigneeId: string;
   likedUsers?: LikedUserDataType[];
   createdAt?: Date;
   updatedAt?: Date;
-};
+}
 
-export type TaskForkDataType = BaseDataType & {
+export interface TaskForkDataType extends BaseDataType {
   taskId: string;
   taskCreatorId: string;
   forkedUsers?: ForkedUserDataType[];
   createdAt?: Date;
   updatedAt?: Date;
-};
+}
