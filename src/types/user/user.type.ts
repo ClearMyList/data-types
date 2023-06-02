@@ -33,7 +33,7 @@ export type AccomplishmentDataType = {
 /**
  * AuthUserDataType is simply combain necessary properties of user and user profile.
  */
-export interface AuthUserDataType {
+export interface AuthUserDataType extends BaseDataType {
   username: string;
   token?: string;
   email: string;
