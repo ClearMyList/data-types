@@ -51,3 +51,13 @@ export interface AuthUserDataType extends BaseDataType {
 export interface UserPreferenceDataType extends BaseDataType {
   theme: ThemeDataType;
 }
+
+export interface UserFollowerDataType extends BaseDataType {
+  username: string;
+  user?: UserDataType;
+  followerUsername: string;
+  follower?: UserDataType;
+  isDeleted?: boolean;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
