@@ -31,21 +31,27 @@ export type AccomplishmentDataType = {
 };
 
 /**
- * AuthUserDataType is simply combain necessary properties of user and user profile.
+ * Simply combine necessary properties of user and user profile.
  */
-export interface AuthUserDataType extends BaseDataType {
+export interface UserCombinedDataType extends BaseDataType {
   username: string;
-  token?: string;
   email: string;
   nickname?: string;
   role: UserRoleType;
   avatarUrl?: string;
-  theme?: ThemeDataType;
-  isEmailVerified?: boolean;
   isBlocked?: boolean;
   isDeactivated?: boolean;
   createdAt?: Date;
   updatedAt?: Date;
+}
+
+/**
+ * Simply combine necessary properties of user and user profile and user preference.
+ */
+export interface AuthUserDataType extends UserCombinedDataType {
+  token?: string;
+  theme?: ThemeDataType;
+  isEmailVerified?: boolean;
 }
 
 export interface UserPreferenceDataType extends BaseDataType {
@@ -54,9 +60,9 @@ export interface UserPreferenceDataType extends BaseDataType {
 
 export interface UserFollowerDataType extends BaseDataType {
   username: string;
-  user?: UserDataType;
+  user?: UserCombinedDataType;
   followerUsername: string;
-  follower?: UserDataType;
+  follower?: UserCombinedDataType;
   isDeleted?: boolean;
   createdAt?: Date;
   updatedAt?: Date;
