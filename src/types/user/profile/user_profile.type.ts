@@ -6,8 +6,6 @@ export interface UserProfileDataType extends BaseDataType {
   location?: string;
   about?: string;
   occupation?: string;
-  followerCount?: number;
-  followingCount?: number;
   forkedCount?: number;
   appliedCount?: number;
   likedCount?: number;
