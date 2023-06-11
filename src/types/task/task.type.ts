@@ -1,5 +1,6 @@
 import { BaseDataType } from '../base/base.type';
 import { DateTimeDataType } from '../reminder/reminder.type';
+import { TemplateDataType } from '../template/template.type';
 import { ForkedUserDataType, LikedUserDataType } from '../user/user.type';
 
 export type TaskVisibilityType = 'public' | 'friend' | 'private';
@@ -31,6 +32,7 @@ export interface TaskDataType extends BaseDataType {
   forkFromId?: string;
   repeatParentTaskId?: string;
   templateId?: string;
+  template?: TemplateDataType;
   subtaskIndexOfTemplate?: number;
 }
 
