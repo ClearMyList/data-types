@@ -7,7 +7,7 @@ export type TaskVisibilityType = 'public' | 'friend' | 'private';
 
 export type TaskRepeatRuleType = 'none' | 'daily' | 'weekly' | 'monthly' | 'yearly';
 
-export type TaskCategoryType = 'plan' | 'completed' | 'received' | 'trash';
+export type TaskCategoryType = 'plan' | 'completed' | 'sent' | 'received' | 'trash';
 
 export interface TaskSubitemDataType {
   subject: string;
