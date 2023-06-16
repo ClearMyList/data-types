@@ -23,12 +23,14 @@ export interface TaskDataType extends BaseDataType {
   visibility?: TaskVisibilityType;
   isCompleted?: boolean;
   isDeleted?: boolean;
+  isAccepted?: boolean;
   attachments?: TaskAttachmentDataType[];
   subitems?: TaskSubitemDataType[];
   remindAt?: DateTimeDataType;
   createdAt?: Date;
   updatedAt?: Date;
   completedAt?: Date;
+  acceptedAt?: Date;
   forkFromId?: string;
   repeatParentTaskId?: string;
   templateId?: string;
