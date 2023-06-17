@@ -6,6 +6,7 @@ export type NotificationCategoryType =
   | 'task-like'
   | 'task-dislike'
   | 'task-fork'
+  | 'task-assigned'
   | 'template-like'
   | 'template-dislike'
   | 'template-apply'
