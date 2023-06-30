@@ -51,6 +51,7 @@ export interface UserCombinedDataType extends BaseDataType {
 export interface AuthUserDataType extends UserCombinedDataType {
   token?: string;
   theme?: ThemeDataType;
+  taskQuickCreation?: boolean;
   isEmailVerified?: boolean;
 }
 
