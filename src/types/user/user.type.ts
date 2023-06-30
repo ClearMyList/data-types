@@ -57,6 +57,7 @@ export interface AuthUserDataType extends UserCombinedDataType {
 
 export interface UserPreferenceDataType extends BaseDataType {
   theme: ThemeDataType;
+  taskQuickCreation?: boolean;
 }
 
 export interface UserFollowerDataType extends BaseDataType {
